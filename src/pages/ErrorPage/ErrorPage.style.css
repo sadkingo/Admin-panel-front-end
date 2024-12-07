@@ -1,0 +1,65 @@
+.error-page {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(var(--color-main), var(--color-secondary));
+}
+.error-page__container {
+    font-family: "Poppins";
+    position: absolute;
+    top: clamp(55%, 65vw, 70%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: inherit;
+    height: 165px;
+    color: white;
+}
+.error-page__number {
+    font-family: Impact, sans-serif;
+    font-size: clamp(10rem, 25vw, 35rem);
+    position: absolute;
+    top: 48%;
+    width: 100%;
+    user-select: none;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+}
+.error-page__circle {
+    transform: translateY(-50%) scale(100%);
+}
+.error-page__title {
+    font-size: clamp(0.8rem, 2vw, 3rem);
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+.error-page__subtitle {
+    font-size: clamp(12px, 1vw, 19px);
+    margin-bottom: 16px;
+}
+.error-page__back-btn {
+    font-family: "inter";
+    font-size: 16px;
+    height: 44px;
+    padding: 8px 24px;
+    cursor: pointer;
+    color: var(--color-paragraph);
+    border: none;
+    border-radius: 4px;
+    background-color: #e9ecef;
+}
+@media screen and (max-width: 1440px) {
+    .error-page__circle {
+        transform: translateY(-50%) scale(70%);
+    }
+}
+@media screen and (max-width: 768px) {
+    .error-page__circle {
+        transform: translateY(-50%) scale(50%);
+    }
+}

@@ -1,0 +1,206 @@
+.open-setting-gear {
+    z-index: 999;
+    position: fixed;
+    top: 35%;
+    width: 35px;
+    height: 35px;
+    padding: 3px;
+    cursor: pointer;
+    color: var(--color-bg);
+    border: none;
+    border-radius: 50% 0 0 50%;
+    background-color: var(--color-secondary);
+}
+.open-setting-gear:dir(ltr) {
+    right:0;
+}
+.open-setting-gear:dir(rtl) {
+    left: 0;
+    border-radius: 0 50% 50% 0;
+}
+.open-setting-gear svg {
+    width: 100%;
+    height: 100%;
+    animation: spin 7s linear infinite;
+}
+.sidebar-menu {
+    z-index: 999;
+    font-family: "Inter", sans-serif;
+    position: fixed;
+
+    display: flex;
+    overflow: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 400px;
+    max-height: 100vh;
+    padding: 24px;
+    transition: all 0.75s cubic-bezier(0.65, 0.05, 0.36, 1) 0s;
+    background-color: var(--color-bg);
+}
+.sidebar-menu:dir(ltr) {
+    right: 0;
+}
+.sidebar-menu:dir(rtl) {
+    left: 0;
+}
+.sidebar-menu--disabled:dir(ltr) {
+    right: -400px;
+}
+.sidebar-menu--disabled:dir(rtl) {
+    left: -400px;
+}
+.sidebar-menu img {
+    display: flex;
+}
+.sidebar-menu__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sidebar-menu button {
+    cursor: pointer;
+}
+.sidebar-menu hr {
+    width: 50%;
+    height: 1px;
+    margin: auto;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    border: none;
+    background-image: linear-gradient(90deg, transparent, #e8e8e8, transparent);
+}
+.head__title {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+}
+.head__close {
+    cursor: pointer;
+    border: none;
+}
+.content {
+    overflow: auto;
+}
+.sidebar-menu .section {
+    display: flex;
+    flex: 1 1 100%;
+    flex-wrap: wrap;
+}
+.section__title {
+    font-size: 19px;
+    font-weight: bold;
+    flex: 1 1 100%;
+    margin-bottom: 24px;
+}
+.content__scheme .section__btn-group {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.content__scheme .section__btn-group > button[type="button"] {
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95px;
+    padding: 8px 16px;
+    color: var(--color-subtitle);
+    border: var(--color-btn-border) 1px solid;
+    border-radius: 4px;
+    background-color: transparent;
+}
+.content__scheme button[type="button"]:focus {
+    border: var(--color-selected) 1px solid;
+}
+.content__scheme .section__btn-group > button[type="button"] svg {
+    overflow: visible;
+    width: 16px;
+    height: 16px;
+
+    margin-inline-end: 10px;
+    -webkit-margin-end: 10px;
+}
+.navbar-style,
+.sidebar-active-style,
+.scheme-direction,
+.sidebar-types {
+    font-size: 16px;
+    display: grid;
+    width: 100%;
+    text-align: center;
+    color: var(--color-subtitle);
+
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+.navbar-style > * > *,
+.sidebar-active-style > * > *,
+.scheme-direction > * > *,
+.sidebar-types > * > * {
+    cursor: pointer;
+}
+.scheme-direction img {
+    width: 100%;
+}
+.content__sidebar-color > .section__btn-group {
+    display: grid;
+    width: 100%;
+
+    gap: 16px 24px;
+    grid-template-columns: repeat(2, 1fr);
+}
+.content__sidebar-color > .section__btn-group > button[type="button"],
+.sidebar-menu__reset-btn {
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    width: 156px;
+    margin: auto;
+    padding: 8px 16px;
+    color: var(--color-subtitle);
+    border: var(--color-btn-border) 1px solid;
+    border-radius: 4px;
+    background-color: transparent;
+}
+.content__sidebar-color > .section__btn-group > button[type="button"]:focus {
+    border: var(--color-selected) 1px solid;
+}
+.circle-color {
+    width: 15px;
+    height: 15px;
+    border: 2px solid black;
+    border-radius: 50%;
+
+    margin-inline-end: 10px;
+    -webkit-margin-end: 10px;
+}
+.circle-color--dark {
+    background-color: black;
+}
+.circle-color--color {
+    background-color: var(--color-main);
+}
+.btn-group__color > .circle-color {
+    border: none;
+}
+.circle-color--white {
+    background-color: white;
+}
+.circle-color--transparent {
+    background-color: transparent;
+}
+.sidebar-types {
+    grid-template-columns: repeat(3, 1fr);
+}
+.sidebar-active-style img,
+.navbar-style img {
+    width: 100%;
+}
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}

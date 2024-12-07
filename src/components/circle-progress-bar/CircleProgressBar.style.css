@@ -1,0 +1,22 @@
+.CircularProgressbar-path {
+    stroke: var(--color-main);
+}
+.CircularProgressbar-trail {
+    stroke: var(--color-bg-3);
+    stroke-width: 4px;
+}
+.CircularProgressbar-text {
+    fill: black;
+}
+.CircularProgressbar-background {
+    fill: green;
+}
+
+[data-test-id="CircularProgressbarWithChildren__children"] {
+    margin-top: 0  !important;
+    top: 0;
+}
+[data-test-id="CircularProgressbarWithChildren"] {
+    width: fit-content;
+    height: fit-content;
+}

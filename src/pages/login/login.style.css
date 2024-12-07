@@ -1,0 +1,74 @@
+.login {
+    overflow: hidden;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+.login__content--left {
+    font-family: "Inter", sans-serif;
+    overflow: auto;
+    width: 50%;
+    height: 100%;
+    padding: 12% 13.65% 0 13.65%;
+}
+.login__logo {
+    display: flex;
+    align-items: center;
+    height: 45px;
+    margin-bottom: 40px;
+}
+.login__brand-name {
+    font-size: 33px;
+    padding-left: 8px;
+}
+.login__forgot-password:visited,
+.login__forgot-password {
+    font-size: 16px;
+    float: right;
+    margin-top: 5px;
+    text-decoration: none;
+    color: var(--color-main);
+}
+.login__signup-link:hover,
+.login__forgot-password:hover {
+    color: var(--color-main-light) !important;
+}
+.login__alt-text,
+.login__signup-text {
+    font-size: 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    text-align: center;
+    color: var(--color-paragraph);
+}
+.login__social-media {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 168px;
+    margin: auto;
+    margin-bottom: 16px;
+}
+.login__social-link img {
+    width: 24px;
+    height: 24px;
+}
+.login__content--right {
+    width: 50%;
+    background: radial-gradient(var(--color-main), var(--color-secondary));
+}
+.login__signup-link:visited,
+.login__signup-link {
+    font-size: 16px;
+    text-decoration: none;
+    color: var(--color-main);
+}
+@media screen and (max-width: 768px) {
+    .login__content--left {
+        width: 100%;
+        padding: 234px 20% 0 20%;
+    }
+    .login__content--right {
+        display: none;
+    }
+}

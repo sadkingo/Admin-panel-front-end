@@ -1,0 +1,29 @@
+.dashboard .card--progress {
+    z-index: 1;
+    display: flex;
+    width: 230px;
+    padding: 24px;
+    border-radius: 8px;
+
+    gap: 40px;
+}
+.dashboard .card {
+    z-index: 1;
+    width: 100%;
+    background-color: var(--color-bg);
+    box-shadow: 0 10px 13px 0 rgba(17, 38, 146, 0.05);
+    font-family: "inter";
+}
+.circle-info {
+    user-select: none;
+}
+.circle-info .title {
+    width: 100%;
+    color: var(--color-subtitle);
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.circle-info .cost {
+    width: 100%;
+}

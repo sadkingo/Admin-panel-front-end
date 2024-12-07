@@ -1,0 +1,69 @@
+.data-table-container {
+    border-radius: 8px;
+    padding: 24px;
+    background-color: var(--color-bg);
+    grid-column: span calc(var(--grid-column-count) * 2 / 3);
+}
+.data-table-header {
+    display: flex;
+    justify-content: space-between;
+    font-family: "inter";
+    padding: 24px;
+    background-color: var(--color-bg);
+
+    .total-sales {
+        font-size: 19px;
+        font-weight: 600;
+    }
+    .title {
+        font-size: 16px;
+        color: var(--color-subtitle);
+    }
+    .data-table-header__mid {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--color-subtitle);
+        font-size: 16px;
+        .salces-color {
+            border-radius: 50%;
+            display: inline-block;
+            width: 13px;
+            height: 13px;
+            background-color: var(--color-main);
+            margin-inline-end: 8px;
+        }
+        .cost-color {
+            border-radius: 50%;
+            display: inline-block;
+            width: 13px;
+            height: 13px;
+            background-color:#A7F7FB;
+            margin-inline-end: 8px;
+            margin-inline-start: 8px;
+        }
+    }
+    .data-table-header__right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-right: 15px;
+        cursor: pointer;
+
+        .option-title{
+            color: var(--color-subtitle);
+        }
+        .open-date-options {
+            margin-inline-start: 10px;
+            font-size: 24px;
+            font-weight: 500;
+            top:0;
+            right: -20px;
+            rotate: 90deg;
+        }
+    }
+}
+.area-chart {
+
+}

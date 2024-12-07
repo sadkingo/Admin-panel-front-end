@@ -1,0 +1,14 @@
+.circle-parent {
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(var(--color-main), var(--color-secondary));
+}
+.circle {
+    position: absolute;
+    width: 63%;
+    opacity: 0.75;
+    border-radius: 50%;
+    box-shadow: inset 24px 32px 184px 24px var(--color-shadow) ;
+
+    aspect-ratio: 1/1;
+}
