@@ -1,5 +1,6 @@
 import { Icon } from '@iconify/react';
 import React, { useState } from 'react'
+import {Link} from "react-router-dom";
 
 function ButtonSubMenu({ menuElem }) {
     const [selectedMenuSubIndex, setSelectedMenuSubIndex] = useState(menuElem.map(() => false));
@@ -12,13 +13,33 @@ function ButtonSubMenu({ menuElem }) {
 
     return (
         menuElem.map((menu, index) => (
-            <div className={`menu-group${selectedMenuSubIndex === index ? " selected" : ""}`} key={menu.id}>
-                {renderSubMenu(menu, index)}
-                {renderSubSubMenu(menu, index)}
-            </div>
+            <React.Fragment key={index}>
+            {
+                menu.link ?
+                (<MenuLinkWrapper menu={menu}>
+                    <div className={`menu-group${selectedMenuSubIndex === index ? " selected" : ""}`} >
+                        {renderSubMenu(menu, index)}
+                        {renderSubSubMenu(menu, index)}
+                    </div>
+                </MenuLinkWrapper>
+                ): (
+                        <div className={`menu-group${selectedMenuSubIndex === index ? " selected" : ""}`}>
+                            {renderSubMenu(menu, index)}
+                            {renderSubSubMenu(menu, index)}
+                        </div>
+                )
+            }
+            </React.Fragment>
         ))
     )
 
+    function MenuLinkWrapper({menu, children}) {
+        return (
+            <Link to={menu.link}>
+                {children}
+            </Link>
+        )
+    }
     function renderMenuTitle(menu) {
         return (
             <div className='menu-group__menu--title'>

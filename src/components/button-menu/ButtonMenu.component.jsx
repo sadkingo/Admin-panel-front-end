@@ -10,14 +10,14 @@ function ButtonMenu({ menu, index, isMenuActive }) {
     }
 
     return (
-        <div
-            onFocus={() => { handleMenuSelect(index) }}
-            className={`side-menu__section sub-menu ${index === selectedMenuIndex ? "selected" : ""}`}>
-            <div className="sub-menu__title" > {isMenuActive ? menu.title : "-"}</div>
-            <div className='sub-menu__menu-group'>
-                <ButtonSubMenu menu={menu.subMenus} />
+            <div
+                onFocus={() => { handleMenuSelect(index) }}
+                className={`side-menu__section sub-menu ${index === selectedMenuIndex ? "selected" : ""}`}>
+                <div className="sub-menu__title" > {isMenuActive ? menu.title : "-"}</div>
+                <div className='sub-menu__menu-group'>
+                    <ButtonSubMenu menu={menu.subMenus} />
+                </div>
             </div>
-        </div>
     )
 }
 export default ButtonMenu;
