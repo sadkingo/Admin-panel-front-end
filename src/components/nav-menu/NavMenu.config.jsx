@@ -14,8 +14,9 @@ const menusData = [
         id: 2, title: "Pages", subMenus: [
             {
                 id: 21, title: "Example", icon: "icon-park-solid:gamepad", subMenus: [
-                    { id: 211, title: "test", icon: "", },
-                    { id: 212, title: "test", icon: "", }
+                    { id: 211, title: "login", link:"/login" , icon: "", },
+                    { id: 212, title: "register", link:"/register",  icon: "", },
+                    { id: 213, title: "404 page", link: "/404" , icon: "", },
                 ]
             },
             {
